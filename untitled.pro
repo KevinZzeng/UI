@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-03-17T16:29:55
+# Project created by QtCreator 2018-03-18T13:24:28
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = BookManageSystemUI
+TARGET = untitled
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -24,11 +24,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        loginwindow.cpp \
-    managerwindow.cpp
+        mainwindow.cpp \
+    dialog.cpp \
+    user_login.cpp \
+    test.cpp
 
-HEADERS  += loginwindow.h \
-    managerwindow.h
+HEADERS  += mainwindow.h \
+    dialog.h \
+    user_login.h
 
-FORMS    += loginwindow.ui \
-    managerwindow.ui
+FORMS    += mainwindow.ui \
+    dialog.ui \
+    user_login.ui
