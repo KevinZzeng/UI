@@ -1,5 +1,6 @@
 #include "user_login.h"
 #include "ui_user_login.h"
+#include "iostream"
 
 User_login::User_login(QWidget *parent) :
     QWidget(parent),
@@ -11,4 +12,9 @@ User_login::User_login(QWidget *parent) :
 User_login::~User_login()
 {
     delete ui;
+}
+
+void User_login::on_pushButton_clicked()
+{
+    //cout << "sss" << endl;
 }

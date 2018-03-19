@@ -27,12 +27,15 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     dialog.cpp \
     user_login.cpp \
-    test.cpp
+    test.cpp \
+    user_index.cpp
 
 HEADERS  += mainwindow.h \
     dialog.h \
-    user_login.h
+    user_login.h \
+    user_index.h
 
 FORMS    += mainwindow.ui \
     dialog.ui \
-    user_login.ui
+    user_login.ui \
+    user_index.ui
