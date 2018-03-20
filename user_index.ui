@@ -31,7 +31,7 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QFrame" name="frame_2">
+   <widget class="QFrame" name="Nav">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -49,7 +49,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="btnBack">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -68,7 +68,7 @@ font-size:18px;
       <string>退出登录</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="btnMessage">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -87,7 +87,7 @@ font-size:18px;
       <string>消息提示</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="btnLike">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -106,7 +106,7 @@ font-size:18px;
       <string>收藏书目</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="btnBorrow">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -125,7 +125,7 @@ font-size:18px;
       <string>借阅历史</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_5">
+    <widget class="QPushButton" name="btnOrder">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -144,7 +144,7 @@ font-size:18px;
       <string>预约记录</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_11">
+    <widget class="QPushButton" name="btnBook">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -164,7 +164,7 @@ font-size:18px;
       <string>图书管理</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_12">
+    <widget class="QPushButton" name="btnPerson">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -207,13 +207,13 @@ border:none;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QFrame" name="frame_3">
+   <widget class="QFrame" name="PersonIndex">
     <property name="geometry">
      <rect>
       <x>240</x>
       <y>0</y>
       <width>861</width>
-      <height>211</height>
+      <height>561</height>
      </rect>
     </property>
     <property name="maximumSize">
@@ -280,21 +280,20 @@ border-image: url(:/new/icon/images/20150129085241_ASwjx.thumb.700_0.jpeg);</str
     <widget class="QPushButton" name="cover">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>150</y>
-       <width>191</width>
-       <height>41</height>
+       <x>480</x>
+       <y>100</y>
+       <width>171</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">border:none;
-color: rgb(255, 255, 255);
-background-color: rgba(0, 41, 87, 149);
-font-size:15px;
+color:#D6000F;
+font-size:18px;
 display:none;</string>
      </property>
      <property name="text">
-      <string>修改头像</string>
+      <string>修改个人信息&gt;&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
