@@ -39,3 +39,6 @@ FORMS    += mainwindow.ui \
     dialog.ui \
     user_login.ui \
     user_index.ui
+
+RESOURCES += \
+    images.qrc
