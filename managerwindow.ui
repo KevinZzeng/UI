@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>managerWindow</class>
+ <widget class="QWidget" name="managerWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>840</width>
+    <height>924</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>图书管理系统--管理员</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_navi">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>471</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>功能栏</string>
+   </property>
+   <widget class="QToolButton" name="toolBtn_addmanager">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>30</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>添加管理员</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolBtn_exit">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>30</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出登录</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_check">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>查看预约信息</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>230</y>
+     <width>821</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>771</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="tab_user">
+    <attribute name="title">
+     <string>用户</string>
+    </attribute>
+    <widget class="QGroupBox" name="grpBox_usersearch">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>711</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>搜索用户信息</string>
+     </property>
+     <widget class="QLabel" name="lbl_stuname">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>72</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>姓名:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_num">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>40</y>
+        <width>72</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>学号:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>40</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_major">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>40</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>专业:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbBox_major">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>40</y>
+        <width>201</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>海洋科学</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>大气科学</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>电子信息工程</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>物理学</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>电子信息科学与技术</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>通信工程</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>计算机科学与技术</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>保密管理</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>海洋技术</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>化学</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>化学工程与工艺</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>地质学</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="btn_usersearch">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>20</y>
+        <width>71</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+color:green;
+}</string>
+      </property>
+      <property name="text">
+       <string>检索</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QTableView" name="tblView_userinfo">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>130</y>
+       <width>611</width>
+       <height>481</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_deletechosen">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>200</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>删除选中</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_updatechoosen">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>260</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>修改选中</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_delete">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>390</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>批量删除</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_update">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>450</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>批量修改</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_book">
+    <attribute name="title">
+     <string>图书</string>
+    </attribute>
+    <widget class="QGroupBox" name="grpBox_booksearch">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>681</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>检索图书信息</string>
+     </property>
+     <widget class="QLabel" name="lbl_varies">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>72</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>分类:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cboBox_varies">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>全部</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>文学</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>理科</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>工科</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>社科</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lbl_bookname">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>40</y>
+        <width>72</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>书名:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_bookname">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>40</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_writer">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>40</y>
+        <width>72</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>作者:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_writer">
+      <property name="geometry">
+       <rect>
+        <x>432</x>
+        <y>40</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_bookinfosearch">
+      <property name="geometry">
+       <rect>
+        <x>582</x>
+        <y>20</y>
+        <width>81</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>检索</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QTableView" name="tblView_bookinfo">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>140</y>
+       <width>571</width>
+       <height>421</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_bookadd">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>250</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>批量增加</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_bookdelete">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>420</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>批量删除</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_updatechoosenbookinfo">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>580</y>
+       <width>161</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>修改选中书籍信息</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_checkchoosenuserinfo">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>580</y>
+       <width>171</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>查看选中借阅用户</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_record">
+    <attribute name="title">
+     <string>操作记录</string>
+    </attribute>
+    <widget class="QListView" name="listView_record">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>631</width>
+       <height>541</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="lbl_time">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>220</y>
+     <width>221</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>8</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>initializing</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
