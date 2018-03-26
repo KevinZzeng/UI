@@ -194,7 +194,7 @@ font-size:22px;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">border-image: url(:/new/images/images/123.png);</string>
+       <string notr="true">image:url(:/new/images/images/lib.png);</string>
       </property>
       <property name="text">
        <string/>
@@ -234,7 +234,7 @@ font-size:22px;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">image: url(:/new/images/images/20150129085241_ASwjx.thumb.700_0.jpeg);</string>
+       <string notr="true">image: url(:/new/images/images/pic.jpeg);</string>
       </property>
       <property name="text">
        <string/>

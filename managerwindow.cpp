@@ -48,6 +48,11 @@ void managerWindow::initialize()
 
     // userinfo_model->removeRow(x);  //删除指定行
     // ui->tblView_bookinfo->currentIndex().row();  //获得选中行
-    //
+    /*
+     QModelIndexmdidx=m_ui->tbList->model()->index(row,column); //获得需要编辑的单元格的位置
+     m_ui->tbList->setFocus(); //把输入焦点交给tbList
+     m_ui->tbList->setCurrentIndex(mdidx); //设定需要编辑的单元格
+     m_ui->tbList->edit(mdidx); //开始编辑
+    */
 }
 

@@ -35,8 +35,6 @@ HEADERS  += \
     headermodel.h \
     loginwindow.h \
     managerwindow.h \
-    ui_loginwindow.h \
-    ui_managerwindow.h \
     user_index.h \
     user_login.h
 
