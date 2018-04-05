@@ -42,16 +42,19 @@ void User_Index::on_pushButton_2_clicked()  //"图书管理"
     changeMune();
     ui->pushButton_2->setStyleSheet(click_mune);
     ui->book_manage->setVisible(true);
-
+    ui->bookInformation->setVisible(false);
+    ui->search->setVisible(false);
     //绑定分类
     ui->cbxClass->addItem(QString::fromLocal8Bit("全部"));
     ui->cbxClass->addItem(QString::fromLocal8Bit("分类一"));
+
 }
 
 void User_Index::on_pushButton_3_clicked()  //"预约记录"
 {
     changeMune();
     ui->pushButton_3->setStyleSheet(click_mune);
+
 }
 
 void User_Index::on_pushButton_4_clicked()  //"借阅管理"
@@ -138,11 +141,18 @@ void User_Index::bindBorrowItem(){
 
 void User_Index::bindRecommend(){       //绑定个人推荐
     QString fileName = "images/lib.png";
-    QPixmap *pixmap = new QPixmap(fileName);
-    pixmap->scaled(ui->recommend_1->size(), Qt::KeepAspectRatio);
-    //QIcon* qicon = new QIcon(*pixmap);
-    ui->recommend_1->setIcon(*(new QIcon(*pixmap)));
+    ui->recommend_1->setStyleSheet("border-image:url("+ dirpath +"/images/lib.png);");
+    ui->bookInformation->setVisible(true);
+}
 
+void User_Index::bindBookInfor(){
+    QString fileName = "/images/s29715023.jpg";
+    ui->bookCover->setStyleSheet("border-image:url("+ dirpath + fileName +");");
+    ui->bookAuthor->setText(QString::fromLocal8Bit("张炜 "));
+    ui->bookTitle->setText(QString::fromLocal8Bit("海边兔子有所思"));
+    ui->bookPublish->setText(QString::fromLocal8Bit("长江文艺出版社"));
+    ui->bookClass->setText(QString::fromLocal8Bit("好书，值得一读"));
+    ui->bookContent->setText(QString::fromLocal8Bit("如果一个写作者胡编乱造，就不如记录一些真实发生的事情更好。\n本书收录张炜近年来在海边居住对人生、事物以及写作的观察和思索。他喜欢“小地方”，不习惯吵闹。平时觉得有机会写出自己的心情已经很幸福了。\n写出好的文字，就有一份自我欣赏的快乐。 本书希望能够给读者带来这份写作者的宁静和快乐。\n同时收录今年来张炜重要创作篇目之创作感悟。"));
 }
 
 //void User_Index::on_tableView_clicked(const QModelIndex &index)
@@ -164,7 +174,7 @@ void User_Index::on_btnEdiInfor_clicked()
 
 void User_Index::on_pushButton_9_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, "File Dialog", QCoreApplication::applicationFilePath(), "Picture(* png * jpg)");
+    QString fileName = QFileDialog::getOpenFileName(this, "File Dialog", dirpath, "Picture(* png * jpg)");
 
     if(!fileName.isEmpty()){
         //QImage* image = new QImage(fileName);
@@ -199,4 +209,26 @@ void User_Index::on_PersonUp_clicked()      //个人中心--上一页
 void User_Index::on_tableView_doubleClicked(const QModelIndex &index)       //个人中心借阅信息双击事件
 {
     cout << index.column() << "  " << index.row() << endl;
+}
+
+void User_Index::on_recommend_1_clicked()
+{
+    cout << "recommend_1" << endl;
+    bindBookInfor();
+    ui->bookInformation->setVisible(true);
+}
+
+void User_Index::on_recommend_2_clicked()
+{
+
+}
+
+void User_Index::on_recommend_3_clicked()
+{
+
+}
+
+void User_Index::on_recommend_4_clicked()
+{
+
 }

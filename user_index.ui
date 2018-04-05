@@ -759,8 +759,11 @@ background-color: #002957;</string>
         <height>241</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(C:/Users/www/Desktop/Lib/images/lib.png);</string>
+      </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="recommend_2">
@@ -801,6 +804,246 @@ background-color: #002957;</string>
       <property name="text">
        <string>PushButton</string>
       </property>
+     </widget>
+     <widget class="QFrame" name="search">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>310</y>
+        <width>911</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableView" name="search_result">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>831</width>
+         <height>251</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="search_up">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>290</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;
+background:#002957;
+color:#fff;
+font-size:18px;
+border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>上一页</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="search_down">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>290</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;
+background:#002957;
+color:#fff;
+font-size:18px;
+border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>下一页</string>
+       </property>
+      </widget>
+      <zorder>search_result</zorder>
+      <zorder>search_up</zorder>
+      <zorder>search_down</zorder>
+      <zorder>bookInformation</zorder>
+      <zorder>bookInformation</zorder>
+     </widget>
+     <widget class="QFrame" name="bookInformation">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>921</width>
+        <height>641</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="bookCover">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>40</y>
+         <width>171</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="bookTitle">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>40</y>
+         <width>191</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:18px;</string>
+       </property>
+       <property name="text">
+        <string>书名</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="bookAuthor">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>120</y>
+         <width>191</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:18px;</string>
+       </property>
+       <property name="text">
+        <string>作者</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="bookPublish">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>200</y>
+         <width>191</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:18px;</string>
+       </property>
+       <property name="text">
+        <string>出版社</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="bookClass">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>270</y>
+         <width>191</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:18px;</string>
+       </property>
+       <property name="text">
+        <string>分类</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnBorrow">
+       <property name="geometry">
+        <rect>
+         <x>680</x>
+         <y>40</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:18px;
+background:#002957;
+color:#fff;
+border:none;
+border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>借阅</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnLike">
+       <property name="geometry">
+        <rect>
+         <x>680</x>
+         <y>150</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:18px;
+background:#002957;
+color:#fff;
+border:none;
+border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>收藏</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnOrder">
+       <property name="geometry">
+        <rect>
+         <x>680</x>
+         <y>250</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:18px;
+background:#002957;
+color:#fff;
+border:none;
+border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>预约</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="bookContent">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>370</y>
+         <width>801</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:18px;</string>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <zorder>nav</zorder>

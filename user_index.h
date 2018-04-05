@@ -5,6 +5,7 @@
 #include <QString>
 #include <list>
 #include <string>
+#include "QDir"
 namespace Ui {
 class User_Index;
 }
@@ -41,6 +42,8 @@ private slots:
     void bindRecommend();
     //void on_tableView_clicked(const QModelIndex &index);
 
+    void bindBookInfor();
+
     void on_btnEdiInfor_clicked();
 
     void on_pushButton_9_clicked();
@@ -53,11 +56,20 @@ private slots:
 
     void on_tableView_doubleClicked(const QModelIndex &index);
 
+    void on_recommend_1_clicked();
+
+    void on_recommend_2_clicked();
+
+    void on_recommend_3_clicked();
+
+    void on_recommend_4_clicked();
+
 private:
     Ui::User_Index *ui;
     QString normal_mune = "background:#fff;border:none;font-size:22px;";
     QString click_mune = "background:#002957;color:#fff;border:none;font-size:22px;";
     QString changeCoverFileName;
+    QString dirpath = QDir::currentPath();
 };
 
 #endif // USER_INDEX_H

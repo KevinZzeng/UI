@@ -3,7 +3,12 @@
 #include "user_index.h"
 #include "user_login.h"
 #include <QApplication>
+#include <iostream>
 #include <QHBoxLayout>
+#include <QDir>
+#include <QString>
+#include <string>
+using namespace  std;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -15,7 +20,9 @@ int main(int argc, char *argv[])
 
     User_Index u;
     u.show();
-    //QImage image=new QImage("images/left1.jpg");
-    //image.s
+
+//    QString folderPathQt = QDir::currentPath();
+//    string aaaa = folderPathQt.toStdString();
+//    cout << aaaa << endl;
     return a.exec();
 }

@@ -74,6 +74,20 @@ public:
     QPushButton *recommend_2;
     QPushButton *recommend_3;
     QPushButton *recommend_4;
+    QFrame *search;
+    QTableView *search_result;
+    QPushButton *search_up;
+    QPushButton *search_down;
+    QFrame *bookInformation;
+    QLabel *bookCover;
+    QLabel *bookTitle;
+    QLabel *bookAuthor;
+    QLabel *bookPublish;
+    QLabel *bookClass;
+    QPushButton *btnBorrow;
+    QPushButton *btnLike;
+    QPushButton *btnOrder;
+    QLabel *bookContent;
 
     void setupUi(QMainWindow *User_Index)
     {
@@ -341,6 +355,7 @@ public:
         recommend_1 = new QPushButton(book_manage);
         recommend_1->setObjectName(QStringLiteral("recommend_1"));
         recommend_1->setGeometry(QRect(60, 390, 161, 241));
+        recommend_1->setStyleSheet(QStringLiteral("border-image:url(C:/Users/www/Desktop/Lib/images/lib.png);"));
         recommend_2 = new QPushButton(book_manage);
         recommend_2->setObjectName(QStringLiteral("recommend_2"));
         recommend_2->setGeometry(QRect(290, 390, 161, 241));
@@ -350,6 +365,85 @@ public:
         recommend_4 = new QPushButton(book_manage);
         recommend_4->setObjectName(QStringLiteral("recommend_4"));
         recommend_4->setGeometry(QRect(730, 390, 161, 241));
+        search = new QFrame(book_manage);
+        search->setObjectName(QStringLiteral("search"));
+        search->setGeometry(QRect(20, 310, 911, 341));
+        search->setFrameShape(QFrame::StyledPanel);
+        search->setFrameShadow(QFrame::Raised);
+        search_result = new QTableView(search);
+        search_result->setObjectName(QStringLiteral("search_result"));
+        search_result->setGeometry(QRect(20, 20, 831, 251));
+        search_up = new QPushButton(search);
+        search_up->setObjectName(QStringLiteral("search_up"));
+        search_up->setGeometry(QRect(100, 290, 161, 41));
+        search_up->setStyleSheet(QLatin1String("border:none;\n"
+"background:#002957;\n"
+"color:#fff;\n"
+"font-size:18px;\n"
+"border-radius: 10px;"));
+        search_down = new QPushButton(search);
+        search_down->setObjectName(QStringLiteral("search_down"));
+        search_down->setGeometry(QRect(510, 290, 161, 41));
+        search_down->setStyleSheet(QLatin1String("border:none;\n"
+"background:#002957;\n"
+"color:#fff;\n"
+"font-size:18px;\n"
+"border-radius: 10px;"));
+        search_result->raise();
+        search_up->raise();
+        search_down->raise();
+        bookInformation = new QFrame(book_manage);
+        bookInformation->setObjectName(QStringLiteral("bookInformation"));
+        bookInformation->setGeometry(QRect(20, 10, 921, 641));
+        bookInformation->setFrameShape(QFrame::StyledPanel);
+        bookInformation->setFrameShadow(QFrame::Raised);
+        bookCover = new QLabel(bookInformation);
+        bookCover->setObjectName(QStringLiteral("bookCover"));
+        bookCover->setGeometry(QRect(70, 40, 171, 271));
+        bookTitle = new QLabel(bookInformation);
+        bookTitle->setObjectName(QStringLiteral("bookTitle"));
+        bookTitle->setGeometry(QRect(350, 40, 191, 51));
+        bookTitle->setStyleSheet(QStringLiteral("font-size:18px;"));
+        bookAuthor = new QLabel(bookInformation);
+        bookAuthor->setObjectName(QStringLiteral("bookAuthor"));
+        bookAuthor->setGeometry(QRect(350, 120, 191, 51));
+        bookAuthor->setStyleSheet(QStringLiteral("font-size:18px;"));
+        bookPublish = new QLabel(bookInformation);
+        bookPublish->setObjectName(QStringLiteral("bookPublish"));
+        bookPublish->setGeometry(QRect(350, 200, 191, 51));
+        bookPublish->setStyleSheet(QStringLiteral("font-size:18px;"));
+        bookClass = new QLabel(bookInformation);
+        bookClass->setObjectName(QStringLiteral("bookClass"));
+        bookClass->setGeometry(QRect(350, 270, 191, 51));
+        bookClass->setStyleSheet(QStringLiteral("font-size:18px;"));
+        btnBorrow = new QPushButton(bookInformation);
+        btnBorrow->setObjectName(QStringLiteral("btnBorrow"));
+        btnBorrow->setGeometry(QRect(680, 40, 161, 41));
+        btnBorrow->setStyleSheet(QLatin1String("font-size:18px;\n"
+"background:#002957;\n"
+"color:#fff;\n"
+"border:none;\n"
+"border-radius: 10px;"));
+        btnLike = new QPushButton(bookInformation);
+        btnLike->setObjectName(QStringLiteral("btnLike"));
+        btnLike->setGeometry(QRect(680, 150, 161, 41));
+        btnLike->setStyleSheet(QLatin1String("font-size:18px;\n"
+"background:#002957;\n"
+"color:#fff;\n"
+"border:none;\n"
+"border-radius: 10px;"));
+        btnOrder = new QPushButton(bookInformation);
+        btnOrder->setObjectName(QStringLiteral("btnOrder"));
+        btnOrder->setGeometry(QRect(680, 250, 161, 41));
+        btnOrder->setStyleSheet(QLatin1String("font-size:18px;\n"
+"background:#002957;\n"
+"color:#fff;\n"
+"border:none;\n"
+"border-radius: 10px;"));
+        bookContent = new QLabel(bookInformation);
+        bookContent->setObjectName(QStringLiteral("bookContent"));
+        bookContent->setGeometry(QRect(70, 370, 801, 221));
+        bookContent->setStyleSheet(QStringLiteral("font-size:18px;"));
         nav->raise();
         person_index->raise();
         PersonUp->raise();
@@ -400,10 +494,21 @@ public:
         );
         search_botton->setText(QApplication::translate("User_Index", "\346\220\234  \347\264\242", Q_NULLPTR));
         label_13->setText(QApplication::translate("User_Index", "\344\270\252\344\272\272\346\216\250\350\215\220 >>", Q_NULLPTR));
-        recommend_1->setText(QApplication::translate("User_Index", "PushButton", Q_NULLPTR));
+        recommend_1->setText(QString());
         recommend_2->setText(QApplication::translate("User_Index", "PushButton", Q_NULLPTR));
         recommend_3->setText(QApplication::translate("User_Index", "PushButton", Q_NULLPTR));
         recommend_4->setText(QApplication::translate("User_Index", "PushButton", Q_NULLPTR));
+        search_up->setText(QApplication::translate("User_Index", "\344\270\212\344\270\200\351\241\265", Q_NULLPTR));
+        search_down->setText(QApplication::translate("User_Index", "\344\270\213\344\270\200\351\241\265", Q_NULLPTR));
+        bookCover->setText(QString());
+        bookTitle->setText(QApplication::translate("User_Index", "\344\271\246\345\220\215", Q_NULLPTR));
+        bookAuthor->setText(QApplication::translate("User_Index", "\344\275\234\350\200\205", Q_NULLPTR));
+        bookPublish->setText(QApplication::translate("User_Index", "\345\207\272\347\211\210\347\244\276", Q_NULLPTR));
+        bookClass->setText(QApplication::translate("User_Index", "\345\210\206\347\261\273", Q_NULLPTR));
+        btnBorrow->setText(QApplication::translate("User_Index", "\345\200\237\351\230\205", Q_NULLPTR));
+        btnLike->setText(QApplication::translate("User_Index", "\346\224\266\350\227\217", Q_NULLPTR));
+        btnOrder->setText(QApplication::translate("User_Index", "\351\242\204\347\272\246", Q_NULLPTR));
+        bookContent->setText(QApplication::translate("User_Index", "TextLabel", Q_NULLPTR));
     } // retranslateUi
 
 };
