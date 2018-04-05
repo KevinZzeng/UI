@@ -1,6 +1,7 @@
-<RCC>
+﻿<RCC>
     <qresource prefix="/new/images">
         <file>images/lib.png</file>
         <file>images/pic.jpeg</file>
+        <file>images/left1.jpg</file>
     </qresource>
 </RCC>

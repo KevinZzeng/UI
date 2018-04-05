@@ -7,12 +7,15 @@
 #include "QStandardItemModel"
 #include "QTableView"
 #include "list"
+#include <QFileDialog>
 using namespace std;
 User_Index::User_Index(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::User_Index)
 {
     ui->setupUi(this);
+    ui->ediInfor->setVisible(false);
+    ui->book_manage->setVisible(false);
     bindBorrowItem();
 }
 
@@ -25,7 +28,12 @@ void User_Index::on_pushButton_clicked()    //"个人中心"
 {
     changeMune();
     ui->pushButton->setStyleSheet(click_mune);
-
+    ui->book_manage->setVisible(false);
+    ui->ediInfor->setVisible(false);
+    ui->PersonUp->setVisible(true);
+    ui->PersonDown->setVisible(true);
+    ui->tableView->setVisible(true);
+    ui->label_7->setVisible(true);
     bindBorrowItem();
 }
 
@@ -33,6 +41,11 @@ void User_Index::on_pushButton_2_clicked()  //"图书管理"
 {
     changeMune();
     ui->pushButton_2->setStyleSheet(click_mune);
+    ui->book_manage->setVisible(true);
+
+    //绑定分类
+    ui->cbxClass->addItem(QString::fromLocal8Bit("全部"));
+    ui->cbxClass->addItem(QString::fromLocal8Bit("分类一"));
 }
 
 void User_Index::on_pushButton_3_clicked()  //"预约记录"
@@ -99,6 +112,7 @@ void User_Index::bindBorrowItem(){
     //表头信息显示居左
     ui->tableView->horizontalHeader()->setDefaultAlignment(Qt::AlignCenter);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);      //  设置不可编辑
     for(int i = 1 ; i < 6;i++ )
         ui->tableView->setColumnWidth(i,95);
 //    ui->tableView->setColumnWidth(0,170);
@@ -122,7 +136,67 @@ void User_Index::bindBorrowItem(){
     }
 }
 
-void User_Index::on_tableView_clicked(const QModelIndex &index)
+void User_Index::bindRecommend(){       //绑定个人推荐
+    QString fileName = "images/lib.png";
+    QPixmap *pixmap = new QPixmap(fileName);
+    pixmap->scaled(ui->recommend_1->size(), Qt::KeepAspectRatio);
+    //QIcon* qicon = new QIcon(*pixmap);
+    ui->recommend_1->setIcon(*(new QIcon(*pixmap)));
+
+}
+
+//void User_Index::on_tableView_clicked(const QModelIndex &index)
+//{
+
+//    //cout <<
+//}
+
+void User_Index::on_btnEdiInfor_clicked()
 {
-    cout << index.column();
+    ui->ediInfor->setVisible(true);
+    ui->PersonUp->setVisible(false);
+    ui->PersonDown->setVisible(false);
+    ui->tableView->setVisible(false);
+    ui->label_7->setVisible(false);
+    ui->txtEdiPwd->setEchoMode(QLineEdit::Password);    //设置密码格式
+    ui->txtEdiPwdre->setEchoMode(QLineEdit::Password);
+}
+
+void User_Index::on_pushButton_9_clicked()
+{
+    QString fileName = QFileDialog::getOpenFileName(this, "File Dialog", QCoreApplication::applicationFilePath(), "Picture(* png * jpg)");
+
+    if(!fileName.isEmpty()){
+        //QImage* image = new QImage(fileName);
+        QPixmap *pixmap = new QPixmap(fileName);
+        pixmap->scaled(ui->cover_3->size(), Qt::KeepAspectRatio);
+        ui->label->setScaledContents(true);
+        ui->cover_3->setPixmap(*pixmap);
+        changeCoverFileName = fileName;     //私有变量changeCoverFileName临时存储待设置的头像文件名
+    }
+    else{   //点击取消,并未上传
+
+    }
+    //qDebug()<<fileName;
+}
+
+void User_Index::on_chaPwd_2_clicked()  //  更换头像
+{
+
+}
+
+void User_Index::on_PersonDown_clicked()    //个人中心--下一页
+{
+
+}
+
+void User_Index::on_PersonUp_clicked()      //个人中心--上一页
+{
+
+}
+
+
+void User_Index::on_tableView_doubleClicked(const QModelIndex &index)       //个人中心借阅信息双击事件
+{
+    cout << index.column() << "  " << index.row() << endl;
 }

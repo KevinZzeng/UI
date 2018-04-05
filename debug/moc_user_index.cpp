@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_User_Index_t {
-    QByteArrayData data[14];
-    char stringdata0[255];
+    QByteArrayData data[20];
+    char stringdata0[384];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,8 +43,14 @@ QT_MOC_LITERAL(8, 154, 23), // "on_pushButton_7_clicked"
 QT_MOC_LITERAL(9, 178, 23), // "on_pushButton_8_clicked"
 QT_MOC_LITERAL(10, 202, 10), // "changeMune"
 QT_MOC_LITERAL(11, 213, 14), // "bindBorrowItem"
-QT_MOC_LITERAL(12, 228, 20), // "on_tableView_clicked"
-QT_MOC_LITERAL(13, 249, 5) // "index"
+QT_MOC_LITERAL(12, 228, 13), // "bindRecommend"
+QT_MOC_LITERAL(13, 242, 22), // "on_btnEdiInfor_clicked"
+QT_MOC_LITERAL(14, 265, 23), // "on_pushButton_9_clicked"
+QT_MOC_LITERAL(15, 289, 19), // "on_chaPwd_2_clicked"
+QT_MOC_LITERAL(16, 309, 21), // "on_PersonDown_clicked"
+QT_MOC_LITERAL(17, 331, 19), // "on_PersonUp_clicked"
+QT_MOC_LITERAL(18, 351, 26), // "on_tableView_doubleClicked"
+QT_MOC_LITERAL(19, 378, 5) // "index"
 
     },
     "User_Index\0on_pushButton_clicked\0\0"
@@ -52,7 +58,10 @@ QT_MOC_LITERAL(13, 249, 5) // "index"
     "on_pushButton_4_clicked\0on_pushButton_5_clicked\0"
     "on_pushButton_6_clicked\0on_pushButton_7_clicked\0"
     "on_pushButton_8_clicked\0changeMune\0"
-    "bindBorrowItem\0on_tableView_clicked\0"
+    "bindBorrowItem\0bindRecommend\0"
+    "on_btnEdiInfor_clicked\0on_pushButton_9_clicked\0"
+    "on_chaPwd_2_clicked\0on_PersonDown_clicked\0"
+    "on_PersonUp_clicked\0on_tableView_doubleClicked\0"
     "index"
 };
 #undef QT_MOC_LITERAL
@@ -63,7 +72,7 @@ static const uint qt_meta_data_User_Index[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      17,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -71,17 +80,23 @@ static const uint qt_meta_data_User_Index[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   69,    2, 0x08 /* Private */,
-       3,    0,   70,    2, 0x08 /* Private */,
-       4,    0,   71,    2, 0x08 /* Private */,
-       5,    0,   72,    2, 0x08 /* Private */,
-       6,    0,   73,    2, 0x08 /* Private */,
-       7,    0,   74,    2, 0x08 /* Private */,
-       8,    0,   75,    2, 0x08 /* Private */,
-       9,    0,   76,    2, 0x08 /* Private */,
-      10,    0,   77,    2, 0x08 /* Private */,
-      11,    0,   78,    2, 0x08 /* Private */,
-      12,    1,   79,    2, 0x08 /* Private */,
+       1,    0,   99,    2, 0x08 /* Private */,
+       3,    0,  100,    2, 0x08 /* Private */,
+       4,    0,  101,    2, 0x08 /* Private */,
+       5,    0,  102,    2, 0x08 /* Private */,
+       6,    0,  103,    2, 0x08 /* Private */,
+       7,    0,  104,    2, 0x08 /* Private */,
+       8,    0,  105,    2, 0x08 /* Private */,
+       9,    0,  106,    2, 0x08 /* Private */,
+      10,    0,  107,    2, 0x08 /* Private */,
+      11,    0,  108,    2, 0x08 /* Private */,
+      12,    0,  109,    2, 0x08 /* Private */,
+      13,    0,  110,    2, 0x08 /* Private */,
+      14,    0,  111,    2, 0x08 /* Private */,
+      15,    0,  112,    2, 0x08 /* Private */,
+      16,    0,  113,    2, 0x08 /* Private */,
+      17,    0,  114,    2, 0x08 /* Private */,
+      18,    1,  115,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -94,7 +109,13 @@ static const uint qt_meta_data_User_Index[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QModelIndex,   13,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QModelIndex,   19,
 
        0        // eod
 };
@@ -115,7 +136,13 @@ void User_Index::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 7: _t->on_pushButton_8_clicked(); break;
         case 8: _t->changeMune(); break;
         case 9: _t->bindBorrowItem(); break;
-        case 10: _t->on_tableView_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 10: _t->bindRecommend(); break;
+        case 11: _t->on_btnEdiInfor_clicked(); break;
+        case 12: _t->on_pushButton_9_clicked(); break;
+        case 13: _t->on_chaPwd_2_clicked(); break;
+        case 14: _t->on_PersonDown_clicked(); break;
+        case 15: _t->on_PersonUp_clicked(); break;
+        case 16: _t->on_tableView_doubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -146,13 +173,13 @@ int User_Index::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 17;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 17)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 11;
+        _id -= 17;
     }
     return _id;
 }

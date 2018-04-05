@@ -29,7 +29,6 @@ SOURCES += \
     managerwindow.cpp \
     user_index.cpp \
     user_login.cpp \
-    viewhelper.cpp
 
 HEADERS  += \
     headermodel.h \

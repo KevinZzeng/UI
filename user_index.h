@@ -37,12 +37,27 @@ private slots:
     void changeMune();
 
     void bindBorrowItem();
-    void on_tableView_clicked(const QModelIndex &index);
+
+    void bindRecommend();
+    //void on_tableView_clicked(const QModelIndex &index);
+
+    void on_btnEdiInfor_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void on_chaPwd_2_clicked();
+
+    void on_PersonDown_clicked();
+
+    void on_PersonUp_clicked();
+
+    void on_tableView_doubleClicked(const QModelIndex &index);
 
 private:
     Ui::User_Index *ui;
     QString normal_mune = "background:#fff;border:none;font-size:22px;";
     QString click_mune = "background:#002957;color:#fff;border:none;font-size:22px;";
+    QString changeCoverFileName;
 };
 
 #endif // USER_INDEX_H
